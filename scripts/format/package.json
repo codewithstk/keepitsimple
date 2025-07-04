@@ -1,0 +1,15 @@
+{
+  "name": "format",
+  "version": "1.0.0",
+  "scripts": {
+  },
+  "private": true,
+  "devDependencies": {
+    "colors": "1.4.0",
+    "globby": "8.0.2",
+    "prettier": "^3.5.3",
+    "js-beautify": "1.15.4",
+    "scssfmt": "1.0.7",
+    "typescript": "5.8.3"
+  }
+}
