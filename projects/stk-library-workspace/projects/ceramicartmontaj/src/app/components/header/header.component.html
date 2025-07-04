@@ -1,0 +1,44 @@
+  <header>
+    <a class="logo u-pointer"
+       (click)="onClickScroll('acasa')">
+      <stk-icon class="icon icon-lg"
+                name="ceramicartmontaj"></stk-icon>
+      <span class="logo-text">eramicArtMontaj</span>
+    </a>
+    <div class="menu__wrapper">
+      <div class="menu__mobile"
+           (click)="openMenu()">
+        <div *ngIf="!isMobileMenuVisible">
+          <stk-icon class="icon u-pointer"
+                    name="menu"></stk-icon>
+        </div>
+        <div *ngIf="isMobileMenuVisible">
+          <stk-icon class="icon u-pointer"
+                    name="close"></stk-icon>
+        </div>
+      </div>
+      <div class="menu__overlay"
+           [class.is-menu-visible]="isMobileMenuVisible">
+      </div>
+      <nav class="menu__content"
+           [class.is-menu-visible]="isMobileMenuVisible">
+        <a [class.active]="activeSectionId === 'acasa'"
+           (click)="onClickScroll('acasa')">ACASA</a>
+
+        <a [class.active]="activeSectionId === 'despre'"
+           (click)="onClickScroll('despre')">DESPRE</a>
+
+        <a [class.active]="activeSectionId === 'servicii'"
+           (click)="onClickScroll('servicii')">SERVICII</a>
+
+        <a [class.active]="activeSectionId === 'portofoliu'"
+           (click)="onClickScroll('portofoliu')">PORTOFOLIU</a>
+
+        <a [class.active]="activeSectionId === 'faq'"
+           (click)="onClickScroll('faq')">INTREBARI FRECVENTE</a>
+
+        <a [class.active]="activeSectionId === 'contact'"
+           (click)="onClickScroll('contact')">CONTACT</a>
+      </nav>
+    </div>
+  </header>

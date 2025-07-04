@@ -1,0 +1,139 @@
+<h1 class="m-y-xl">Simple Accordition</h1>
+
+<stk-accordion [canMultiple]="false">
+  <stk-accordion-item title="Simple Accordion 1"
+                      [isExpanded]="true">
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        A simple and customizable accordion component made with functionalities provided by angular without having
+        to use any 3rd party libraries. Ideal when you want custom basic accordion.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+
+  <stk-accordion-item title="Simple Accordion 2"
+                      [isExpanded]="false">
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        A simple and customizable accordion component made with functionalities provided by angular without having
+        to use any 3rd party libraries. Ideal when you want custom basic accordion.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+
+  <stk-accordion-item title="Simple Accordion 3"
+                      [isExpanded]="false">
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        A simple and customizable accordion component made with functionalities provided by angular without having
+        to use any 3rd party libraries. Ideal when you want custom basic accordion.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+
+  <stk-accordion-item title="Disabled"
+                      [disabled]="true">
+    <ng-template stkAccordionContent>
+      Test 3
+    </ng-template>
+  </stk-accordion-item>
+</stk-accordion>
+
+<h1 class="m-y-xl">Custom Title Accordition</h1>
+
+<stk-accordion [canMultiple]="true">
+  <stk-accordion-item>
+    <ng-template stkAccordionTitle>
+      <div class="d-flex">
+        1
+        <p>Custom Title 1</p>
+      </div>
+    </ng-template>
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        This is a simple implementation where the
+        <strong>title part is custom</strong>. The header design and the button remains the same. This is best when
+        you have to make small changes to title.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+
+  <stk-accordion-item>
+    <ng-template stkAccordionTitle>
+      <div class="d-flex">
+        2
+        <p>Custom Title 2</p>
+      </div>
+    </ng-template>
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        This is a simple implementation where the
+        <strong>title part is custom</strong>. The header design and the button remains the same. This is best when
+        you have to make small changes to title.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+
+  <stk-accordion-item>
+    <ng-template stkAccordionTitle>
+      <div class="d-flex">
+        3
+        <p>Custom Title 3</p>
+      </div>
+    </ng-template>
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        This is a simple implementation where the
+        <strong>title part is custom</strong>. The header design and the button remains the same. This is best when
+        you have to make small changes to title.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+
+</stk-accordion>
+
+<h1 class="m-y-xl">Custom Header Accordition</h1>
+
+<stk-accordion [canMultiple]="true">
+  <stk-accordion-item>
+    <ng-template stkAccordionHeader>
+      <div>
+        <p>Custom Header <span>(with custom toggle button)</span></p>
+      </div>
+    </ng-template>
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        This is a <strong>complete custom header</strong> implementation. The whole header section can be customized
+        to you liking. Toggle method will be exposed which can be used to open/close the section.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+
+  <stk-accordion-item>
+    <ng-template stkAccordionHeader>
+      <div>
+        <p>Custom Header <span>(with custom toggle button)</span></p>
+      </div>
+    </ng-template>
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        This is a <strong>complete custom header</strong> implementation. The whole header section can be customized
+        to you liking. Toggle method will be exposed which can be used to open/close the section.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+
+  <stk-accordion-item>
+    <ng-template stkAccordionHeader>
+      <div>
+        <p>Custom Header <span>(with custom toggle button)</span></p>
+      </div>
+    </ng-template>
+    <ng-template stkAccordionContent>
+      <div class="p-4">
+        This is a <strong>complete custom header</strong> implementation. The whole header section can be customized
+        to you liking. Toggle method will be exposed which can be used to open/close the section.
+      </div>
+    </ng-template>
+  </stk-accordion-item>
+</stk-accordion>

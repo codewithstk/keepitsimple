@@ -1,0 +1,10 @@
+{
+    "name": "keepitsimple",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start:lib": "npm run start --prefix projects/stk-library-workspace",
+        "lint": "npm run lint --prefix projects/stk-library-workspace",
+        "format": "node scripts/format/index"
+    }
+}

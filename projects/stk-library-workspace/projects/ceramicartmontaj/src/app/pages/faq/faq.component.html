@@ -1,0 +1,12 @@
+<stk-accordion [canMultiple]="false">
+  <ng-container *ngFor="let item of data">
+    <stk-accordion-item [title]="item.question"
+                        [isExpanded]="false">
+      <ng-template stkAccordionContent>
+        <div class="p-sm">
+          {{item.answer}}
+        </div>
+      </ng-template>
+    </stk-accordion-item>
+  </ng-container>
+</stk-accordion>

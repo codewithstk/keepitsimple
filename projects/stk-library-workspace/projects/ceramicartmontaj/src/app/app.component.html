@@ -1,0 +1,61 @@
+<app-header height="100px"
+            class="header"
+            [activeSectionId]="currentSectionId"></app-header>
+<section class="content"
+         stkWindowSectionScrollSpy
+         [headerHeightOffset]="100"
+         (sectionChange)="onSectionChange($event)">
+  <section id="acasa">
+    <app-home></app-home>
+  </section>
+
+  <section id="despre">
+    <app-card>
+      <app-section-title [sectionText]="'despre'"
+                         [heading]="'Cine suntem?'"
+                         [description]="'CeramicArtMontaj - Peste 15 ani experiență în domeniu'"></app-section-title>
+      <app-about></app-about>
+    </app-card>
+  </section>
+
+  <section id="servicii">
+    <app-card>
+      <app-section-title sectionText="servicii"
+                         heading="Cu ce te putem ajuta?"
+                         description="Montaj gresie și faiantă în Cluj - Lucrări profesionale și de calitate"></app-section-title>
+      <app-services></app-services>
+    </app-card>
+  </section>
+
+  <section id="portofoliu">
+    <app-card>
+      <app-section-title sectionText="portofoliu"
+                         heading="Portofoliu"
+                         description="Câteva din lucrările noastre"></app-section-title>
+      <app-portfolio></app-portfolio>
+    </app-card>
+  </section>
+
+  <section id="faq">
+    <app-card>
+      <app-section-title sectionText="Intrebari Frecvente (FAQ)"
+                         heading="Răspunsuri la cele mai comune întrebări"
+                         description="Răspunsuri la cele mai comune întrebări"></app-section-title>
+      <app-faq></app-faq>
+    </app-card>
+  </section>
+
+  <section id="contact">
+    <app-card>
+      <app-section-title sectionText="contact"
+                         heading="Cum ne poți contacta?"
+                         description="Dacă ai întrebări suplimentare sau ai nevoie de clarificări, suntem aici pentru tine. Poți să ne contactezi folosind informațiile de mai jos"></app-section-title>
+      <app-contact></app-contact>
+    </app-card>
+  </section>
+</section>
+
+<stk-btn-scroll-to-top *ngIf="isScrollToTopVisible"></stk-btn-scroll-to-top>
+
+<app-footer>
+</app-footer>

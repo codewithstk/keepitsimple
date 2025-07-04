@@ -1,0 +1,18 @@
+@use 'reset';
+@use 'spacers';
+@use 'scrollbar';
+@use 'icons';
+@use 'buttons';
+@use 'other';
+@use 'shortcuts';
+@use 'text';
+
+@mixin setup() {
+  @include spacers.setup();
+  @include scrollbar.setup();
+  @include icons.setup();
+  @include buttons.setup();
+  @include other.setup();
+  @include shortcuts.setup();
+  @include text.setup();
+}

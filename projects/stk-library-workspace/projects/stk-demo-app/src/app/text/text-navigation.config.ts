@@ -1,0 +1,18 @@
+import { SideNavItem } from '../_core/components/side-nav/side-nav-item.model';
+import { ROUTES_CONFIG } from '../_core/routes.config';
+
+export const _NAVIGATION_CONFIG: Array<SideNavItem> = [
+	{
+		name: 'Text',
+		children: getChildren()
+	}
+];
+
+function getChildren(): Array<SideNavItem> {
+	return [
+		{
+			name: 'Text Decrypred',
+			route: ROUTES_CONFIG.text.textDecrypred.url()
+		}
+	];
+}

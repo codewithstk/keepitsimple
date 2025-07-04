@@ -1,0 +1,32 @@
+:host {
+  .side-nav-item {
+    display: flex;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-right: 4px;
+    cursor: default;
+
+    &.selected {
+      background-color: #007acc;
+    }
+
+    .name {
+      margin-left: 5px;
+    }
+  }
+
+  .chevron::before {
+    content: '\25BA';
+    display: inline-block;
+    margin-right: 5px;
+    transition: transform 0.2s ease-in;
+  }
+
+  .expanded.chevron::before {
+    transform: rotate(90deg);
+  }
+
+  .prevent-select {
+    user-select: none;
+  }
+}

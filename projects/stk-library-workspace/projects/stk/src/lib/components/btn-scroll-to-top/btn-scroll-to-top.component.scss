@@ -1,0 +1,18 @@
+.btn-scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.7);
+  fill: var(--color-neutral-contrast);
+  transition: 0.3s ease-in-out;
+  z-index: var(--zindex-over-default);
+  box-shadow: var(--box-shadow-color);
+
+  &:hover {
+    background-color: var(--color-brand);
+    fill: #ffffff;
+    transition: 0.3s ease-in-out;
+  }
+}

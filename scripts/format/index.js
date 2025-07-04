@@ -9,8 +9,8 @@ const colors = require('colors');
 
 (async () => {
 	const filePaths = await globby(['projects']);
-	const formatConfig = JSON.parse(fs.readFileSync('.jsbeautifyrc.json'));
-	const tsFormatConfig = Object.assign({}, { parser: 'typescript' }, await beautifyTS.resolveConfig('.prettierrc'));
+	const formatConfig = JSON.parse(fs.readFileSync('configs/.jsbeautifyrc.json'));
+	const tsFormatConfig = Object.assign({}, { parser: 'typescript' }, await beautifyTS.resolveConfig('configs/.prettierrc'));
 
 	for (const filePath of filePaths) {
     if(filePath.includes("node_modules")){

@@ -1,0 +1,34 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0;
+  text-align: center;
+}
+
+.section-text {
+  text-transform: uppercase;
+  color: var(--color-brand);
+  font-weight: bold;
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacer-sm);
+}
+
+.heading-text {
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 40px;
+  display: block;
+}
+
+.line {
+  width: 70px;
+  margin: var(--spacer-xl);
+  border-top: 10px solid var(--color-brand);
+}
+
+.description {
+  font-size: 16px;
+  color: var(--text-secondary);
+}

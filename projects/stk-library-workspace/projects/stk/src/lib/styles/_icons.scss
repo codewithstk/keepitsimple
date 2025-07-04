@@ -1,0 +1,21 @@
+@mixin setup() {
+  $icon-sizes: (
+    xxs: 12px,
+    xs: 16px,
+    sm: 24px,
+    md: 32px,
+    lg: 48px,
+    xl: 64px,
+    xxl: 96px,
+  );
+
+  @each $size,
+$value in $icon-sizes {
+    .icon-#{$size} {
+      span svg {
+        width: $value;
+        height: $value;
+      }
+    }
+  }
+}

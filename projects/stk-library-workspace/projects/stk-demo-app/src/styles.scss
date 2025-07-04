@@ -1,0 +1,5 @@
+@use './../../stk/src/lib/styles/styles';
+
+:root {
+  @include styles.setup();
+}

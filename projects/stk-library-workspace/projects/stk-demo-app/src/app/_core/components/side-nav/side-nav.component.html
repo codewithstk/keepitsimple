@@ -1,0 +1,8 @@
+<div class="side-nav-search">SEARCH</div>
+
+<div class="side-nav-content">
+  <ng-container *ngFor="let item of items">
+    <app-side-nav-item [item]="item"
+                       [isFirstlevel]="true"></app-side-nav-item>
+  </ng-container>
+</div>

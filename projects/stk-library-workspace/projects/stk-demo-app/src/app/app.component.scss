@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  height: 100vh;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  // https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+  min-width: 0;
+  min-height: 0;
+
+  .header {
+    height: 48px;
+  }
+
+  .content {
+    flex-grow: 1;
+  }
+
+  .footer {
+    height: 32px;
+  }
+}
+  

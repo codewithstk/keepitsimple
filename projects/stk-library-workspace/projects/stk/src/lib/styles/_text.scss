@@ -1,0 +1,19 @@
+@mixin setup() {
+  .text-small {
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    line-height: 2;
+  }
+
+  .text-label {
+    font-weight: 500;
+  }
+
+  .text-description {
+    color: var(--color-neutral-contrast);
+  }
+
+  .text-disabled {
+    color: var(--color-neutral-fill);
+  }
+}

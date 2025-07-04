@@ -1,0 +1,20 @@
+<div class="services-content">
+  <section>
+    <div *ngFor="let item of data1">
+      <p><strong>{{item.title}}</strong></p>
+      <p class="p-sm"
+         *ngFor="let detail of item.details">
+        - {{detail}}
+      </p>
+    </div>
+  </section>
+  <section>
+    <div *ngFor="let item of data2">
+      <p><strong>{{item.title}}</strong></p>
+      <p class="p-sm"
+         *ngFor="let detail of item.details">
+        - {{detail}}
+      </p>
+    </div>
+  </section>
+</div>

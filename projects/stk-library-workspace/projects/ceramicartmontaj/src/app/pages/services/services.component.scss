@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+.services-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacer-xl);
+  text-align: justify;
+}

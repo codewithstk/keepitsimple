@@ -1,0 +1,22 @@
+@mixin setup() {
+  .btn {
+    all: unset;
+    cursor: pointer;
+    outline: none;
+
+    .icon {
+      cursor: pointer;
+    }
+
+    &:disabled,
+    &[disabled] {
+      color: #ddd !important;
+      border-color: #ddd !important;
+
+      .icon {
+        fill: #ddd !important;
+        cursor: auto !important;
+      }
+    }
+  }
+}

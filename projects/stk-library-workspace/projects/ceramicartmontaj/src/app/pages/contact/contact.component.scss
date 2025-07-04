@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacer-xl);
+}
+
+.contact-type {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+
+  .phone-number {
+    margin-left: var(--spacer-md);
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--color-brand);
+    font-weight: bold;
+  }
+}

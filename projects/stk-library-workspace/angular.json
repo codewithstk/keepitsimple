@@ -1,0 +1,261 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "projects": {
+    "stk-demo-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/stk-demo-app",
+      "sourceRoot": "projects/stk-demo-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/stk-demo-app",
+            "index": "projects/stk-demo-app/src/index.html",
+            "browser": "projects/stk-demo-app/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/stk-demo-app/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [{
+              "glob": "**/*",
+              "input": "projects/stk-demo-app/public"
+            }],
+            "styles": [
+              "projects/stk-demo-app/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [{
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "stk-demo-app:build:production"
+            },
+            "development": {
+              "buildTarget": "stk-demo-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/stk-demo-app/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [{
+              "glob": "**/*",
+              "input": "projects/stk-demo-app/public"
+            }],
+            "styles": [
+              "projects/stk-demo-app/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint-app": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/stk-demo-app/src/**/*.ts",
+              "projects/stk-demo-app/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "stk": {
+      "projectType": "library",
+      "root": "projects/stk",
+      "sourceRoot": "projects/stk/src",
+      "prefix": "stk",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/stk/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/stk/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/stk/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/stk/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint-app": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/stk/src/**/*.ts",
+              "projects/stk/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ceramicartmontaj": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ceramicartmontaj",
+      "sourceRoot": "projects/ceramicartmontaj/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/ceramicartmontaj",
+            "index": "projects/ceramicartmontaj/src/index.html",
+            "browser": "projects/ceramicartmontaj/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/ceramicartmontaj/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/ceramicartmontaj/src/robots.txt",
+              "projects/ceramicartmontaj/src/sitemap.xml",
+              {
+                "glob": "**/*",
+                "input": "projects/ceramicartmontaj/public"
+              }
+            ],
+            "styles": [
+              "projects/ceramicartmontaj/src/styles.scss"
+            ],
+            "scripts": [],
+            "server": "projects/ceramicartmontaj/src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "projects/ceramicartmontaj/src/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [{
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "ceramicartmontaj:build:production"
+            },
+            "development": {
+              "buildTarget": "ceramicartmontaj:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/ceramicartmontaj/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [{
+              "glob": "**/*",
+              "input": "projects/ceramicartmontaj/public"
+            }],
+            "styles": [
+              "projects/ceramicartmontaj/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint-app": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ceramicartmontaj/src/**/*.ts",
+              "projects/ceramicartmontaj/src/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

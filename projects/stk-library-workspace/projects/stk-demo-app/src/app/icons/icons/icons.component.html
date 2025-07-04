@@ -1,0 +1,9 @@
+<div class="icons__list">
+  <ng-container *ngFor="let name of iconNames">
+    <div class="icons-list__item">
+      <stk-icon class="icon"
+                [name]="name"></stk-icon>
+      <span class="icon__name">{{ name }}</span>
+    </div>
+  </ng-container>
+</div>

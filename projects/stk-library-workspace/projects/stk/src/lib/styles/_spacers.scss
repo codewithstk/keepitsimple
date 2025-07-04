@@ -1,0 +1,48 @@
+@mixin spacer-generators($property, $prefix) {
+  $spacers: (
+    '0': 0,
+    'xs': var(--spacer-xs),
+    'sm': var(--spacer-sm),
+    'md': var(--spacer-md),
+    'lg': var(--spacer-lg),
+    'xl': var(--spacer-xl),
+    'xxl': var(--spacer-xxl),
+  );
+
+  @each $name, $size in $spacers {
+    .#{$prefix}-#{$name} {
+      #{$property}: $size $size $size $size;
+    }
+
+    .#{$prefix}-y-#{$name} {
+      #{$property}-top: $size;
+      #{$property}-bottom: $size;
+    }
+
+    .#{$prefix}-x-#{$name} {
+      #{$property}-left: $size;
+      #{$property}-left: $size;
+    }
+
+    .#{$prefix}-t-#{$name} {
+      #{$property}-top: $size;
+    }
+
+    .#{$prefix}-r-#{$name} {
+      #{$property}-right: $size;
+    }
+
+    .#{$prefix}-b-#{$name} {
+      #{$property}-bottom: $size;
+    }
+
+    .#{$prefix}-l-#{$name} {
+      #{$property}-left: $size;
+    }
+  }
+}
+
+@mixin setup() {
+  @include spacer-generators(margin, m);
+  @include spacer-generators(padding, p);
+}

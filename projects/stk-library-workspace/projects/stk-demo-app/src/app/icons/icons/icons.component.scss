@@ -1,0 +1,27 @@
+:host {
+  display: block;
+
+  .icons__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+  }
+
+  .icons-list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacer-md);
+    border: 1px solid #cccccc;
+
+    &:hover {
+      background-color: #eeeeee;
+      transition: all ease-out 0.2s;
+    }
+  }
+
+  .icon__name {
+    margin-top: var(--spacer-sm);
+    font-size: 12px;
+  }
+}

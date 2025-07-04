@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+
+button {
+  padding: 0.2rem 1rem;
+  background: var(--primary);
+  border-radius: var(--radius-md);
+  color: #fff;
+}

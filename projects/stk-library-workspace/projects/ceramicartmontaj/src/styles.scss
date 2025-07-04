@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@use './../../stk/src/lib/styles/styles';
+
+:root {
+  @include styles.setup();
+
+  --header-height: 100px;
+}
+
+body {
+  color: var(--color-neutral-contrast);
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: var(--radius-xs);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(130, 130, 130);
+}
